@@ -19,6 +19,10 @@ int main()
 	for (int counter = 0; counter < size1; counter++)
 	{
 		sorted1[counter] = rand() % 100; 
+	}
+	bubbleSort(sorted1, size1);
+	for (int counter = 0; counter < size1; counter++)
+	{
 		cout << setw(2) << sorted1[counter] << "  ";
 	}
 	cout << "\n\n";
@@ -29,6 +33,10 @@ int main()
 	for (int counter = 0; counter < size2; counter++)
 	{
 		sorted2[counter] = rand() % 100;
+	}
+	bubbleSort(sorted2, size2);
+	for (int counter = 0; counter < size2; counter++)
+	{
 		cout << setw(2) << sorted2[counter] << "  ";
 	}
 	cout << "\n\n";
