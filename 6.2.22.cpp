@@ -1,4 +1,4 @@
-// ConsoleApplication14.cpp: определяет точку входа для консольного приложения.
+// ConsoleApplication14.cpp: РѕРїСЂРµРґРµР»СЏРµС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° РґР»СЏ РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ.
 //
 
 #include "stdafx.h"
@@ -74,18 +74,18 @@ static int menu()
 {
 	int choice;
 	system("cls");
-	cout << "\t\tРиэлторская компания 1.0\n";
-	cout << "\n\t\tМЕНЮ:";
-	cout << "\n1)  Добавить предложение;";
-	cout << "\n2)  Добавить заказ;";
-	cout << "\n3)  Зарегистрировать владельца;";
-	cout << "\n4)  Зарегестрировать заказчика;";
-	cout << "\n5)  Найти вариант сделки для владельца;";
-	cout << "\n6)  Найти вариант сделки для заказчика;";
-	cout << "\n7)  Поиск по полю;";
-	cout << "\n8)  Удаление;";
-	cout << "\n9)  Обмен;";
-	cout << "\n10) Выход;";
+	cout << "\t\tР РёСЌР»С‚РѕСЂСЃРєР°СЏ РєРѕРјРїР°РЅРёСЏ 1.0\n";
+	cout << "\n\t\tРњР•РќР®:";
+	cout << "\n1)  Р”РѕР±Р°РІРёС‚СЊ РїСЂРµРґР»РѕР¶РµРЅРёРµ;";
+	cout << "\n2)  Р”РѕР±Р°РІРёС‚СЊ Р·Р°РєР°Р·;";
+	cout << "\n3)  Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ РІР»Р°РґРµР»СЊС†Р°;";
+	cout << "\n4)  Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊ Р·Р°РєР°Р·С‡РёРєР°;";
+	cout << "\n5)  РќР°Р№С‚Рё РІР°СЂРёР°РЅС‚ СЃРґРµР»РєРё РґР»СЏ РІР»Р°РґРµР»СЊС†Р°;";
+	cout << "\n6)  РќР°Р№С‚Рё РІР°СЂРёР°РЅС‚ СЃРґРµР»РєРё РґР»СЏ Р·Р°РєР°Р·С‡РёРєР°;";
+	cout << "\n7)  РџРѕРёСЃРє РїРѕ РїРѕР»СЋ;";
+	cout << "\n8)  РЈРґР°Р»РµРЅРёРµ;";
+	cout << "\n9)  РћР±РјРµРЅ;";
+	cout << "\n10) Р’С‹С…РѕРґ;";
 	cout << "\n\nYour choice : ";
 	cin >> choice;
 	return choice;
@@ -109,13 +109,13 @@ int main()
 			string owner;
 			bool find = false;
 			system("cls");
-			cout << "Добавление нового предложения";
-			cout << "\nКто из владельцев выставляет данной предложение?";
-			cout << "\nФамилия - ";
+			cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+			cout << "\nРљС‚Рѕ РёР· РІР»Р°РґРµР»СЊС†РµРІ РІС‹СЃС‚Р°РІР»СЏРµС‚ РґР°РЅРЅРѕР№ РїСЂРµРґР»РѕР¶РµРЅРёРµ?";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			owner += surname;
 			owner += " ";
@@ -140,26 +140,26 @@ int main()
 				string district;
 				int floor, area, countOfRooms, price;
 				system("cls");
-				cout << "Добавление предложения";
-				cout << "\nРайон - ";
+				cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+				cout << "\nР Р°Р№РѕРЅ - ";
 				cin >> district;
-				cout << "Этаж - ";
+				cout << "Р­С‚Р°Р¶ - ";
 				cin >> floor;
-				cout << "Площадь квартиры - ";
+				cout << "РџР»РѕС‰Р°РґСЊ РєРІР°СЂС‚РёСЂС‹ - ";
 				cin >> area;
-				cout << "Количество комнат - ";
+				cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - ";
 				cin >> countOfRooms;
-				cout << "Цена - ";
+				cout << "Р¦РµРЅР° - ";
 				cin >> price;
 				Offers offer(district, floor, area, countOfRooms, price, owner);
 				vector_offers.push_back(offer);
-				cout << "Предложение успешно добавлено.";
-				cout << "\nВладелец - " << owner;
+				cout << "РџСЂРµРґР»РѕР¶РµРЅРёРµ СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅРѕ.";
+				cout << "\nР’Р»Р°РґРµР»РµС† - " << owner;
 				cout << '\n';
 			}
 			else
 			{
-				cout << "Владелец с такими данными не найден.";
+				cout << "Р’Р»Р°РґРµР»РµС† СЃ С‚Р°РєРёРјРё РґР°РЅРЅС‹РјРё РЅРµ РЅР°Р№РґРµРЅ.";
 			}
 		}
 		else if (choice == 2)
@@ -168,13 +168,13 @@ int main()
 			string buyer;
 			bool find = false;
 			system("cls");
-			cout << "Добавление нового заказа";
-			cout << "\nКто из покупателей добавляет этот заказ?";
-			cout << "\nФамилия - ";
+			cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ Р·Р°РєР°Р·Р°";
+			cout << "\nРљС‚Рѕ РёР· РїРѕРєСѓРїР°С‚РµР»РµР№ РґРѕР±Р°РІР»СЏРµС‚ СЌС‚РѕС‚ Р·Р°РєР°Р·?";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			buyer += surname;
 			buyer += " ";
@@ -199,26 +199,26 @@ int main()
 				string district;
 				int floor, area, countOfRooms, price;
 				system("cls");
-				cout << "Добавление заказа";
-				cout << "\nРайон - ";
+				cout << "Р”РѕР±Р°РІР»РµРЅРёРµ Р·Р°РєР°Р·Р°";
+				cout << "\nР Р°Р№РѕРЅ - ";
 				cin >> district;
-				cout << "Этаж - ";
+				cout << "Р­С‚Р°Р¶ - ";
 				cin >> floor;
-				cout << "Площадь квартиры - ";
+				cout << "РџР»РѕС‰Р°РґСЊ РєРІР°СЂС‚РёСЂС‹ - ";
 				cin >> area;
-				cout << "Количество комнат - ";
+				cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - ";
 				cin >> countOfRooms;
-				cout << "Цена (до) - ";
+				cout << "Р¦РµРЅР° (РґРѕ) - ";
 				cin >> price;
 				Demands demand(district, floor, area, countOfRooms, price, buyer);
 				vector_demand.push_back(demand);
-				cout << "Заказ успешно добавлен.";
-				cout << "\nПокупатель - " << buyer;
+				cout << "Р—Р°РєР°Р· СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅ.";
+				cout << "\nРџРѕРєСѓРїР°С‚РµР»СЊ - " << buyer;
 				cout << "\n";
 			}
 			else
 			{
-				cout << "Покупатель с такими данными не найден.";
+				cout << "РџРѕРєСѓРїР°С‚РµР»СЊ СЃ С‚Р°РєРёРјРё РґР°РЅРЅС‹РјРё РЅРµ РЅР°Р№РґРµРЅ.";
 			}
 		}
 		else if (choice == 3)
@@ -226,13 +226,13 @@ int main()
 			string surname, name, middleName;
 			bool checked = false;
 			system("cls");
-			cout << "Добавление нового владельца.";
-			cout << "\nВведите его данные";
-			cout << "\nФамилия - ";
+			cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ РІР»Р°РґРµР»СЊС†Р°.";
+			cout << "\nР’РІРµРґРёС‚Рµ РµРіРѕ РґР°РЅРЅС‹Рµ";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			for (int i = 0; i < vector_owner.size(); i++)
 			{
@@ -242,7 +242,7 @@ int main()
 					{
 						if (vector_owner[i].middleName == middleName)
 						{
-							cout << "\nВладелец с такими данными уже есть в базе.";
+							cout << "\nР’Р»Р°РґРµР»РµС† СЃ С‚Р°РєРёРјРё РґР°РЅРЅС‹РјРё СѓР¶Рµ РµСЃС‚СЊ РІ Р±Р°Р·Рµ.";
 							checked = true;
 							break;
 						}
@@ -253,7 +253,7 @@ int main()
 			{
 				Owner fio(surname,name,middleName);
 				vector_owner.push_back(fio);
-				cout << "\nВладелец " << surname << " " << name << " " <<  middleName << " успешно добавлен.\n";
+				cout << "\nР’Р»Р°РґРµР»РµС† " << surname << " " << name << " " <<  middleName << " СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅ.\n";
 			}
 		}
 		else if (choice == 4)
@@ -261,13 +261,13 @@ int main()
 			string surname, name, middleName;
 			bool checked = false;
 			system("cls");
-			cout << "Добавление нового покупателя.";
-			cout << "\nВведите его данные";
-			cout << "\nФамилия - ";
+			cout << "Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ РїРѕРєСѓРїР°С‚РµР»СЏ.";
+			cout << "\nР’РІРµРґРёС‚Рµ РµРіРѕ РґР°РЅРЅС‹Рµ";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			for (int i = 0; i < vector_buyer.size(); i++)
 			{
@@ -277,7 +277,7 @@ int main()
 					{
 						if (vector_buyer[i].middleName == middleName)
 						{
-							cout << "\nВладелец с такими данными уже есть в базе.";
+							cout << "\nР’Р»Р°РґРµР»РµС† СЃ С‚Р°РєРёРјРё РґР°РЅРЅС‹РјРё СѓР¶Рµ РµСЃС‚СЊ РІ Р±Р°Р·Рµ.";
 							checked = true;
 							break;
 						}
@@ -288,7 +288,7 @@ int main()
 			{
 				Buyer fio(surname, name, middleName);
 				vector_buyer.push_back(fio);
-				cout << "\nВладелец " << surname << " " << name << " " << middleName << " успешно добавлен.\n";
+				cout << "\nР’Р»Р°РґРµР»РµС† " << surname << " " << name << " " << middleName << " СѓСЃРїРµС€РЅРѕ РґРѕР±Р°РІР»РµРЅ.\n";
 			}
 		}
 		else if (choice == 5)
@@ -297,39 +297,39 @@ int main()
 			bool find = false;
 			string surname, name, middleName, owner;
 			system("cls");
-			cout << "Поиск подходящей сделки для владельца.";
-			cout << "\nВведите данные владельца.";
-			cout << "\nФамилия - ";
+			cout << "РџРѕРёСЃРє РїРѕРґС…РѕРґСЏС‰РµР№ СЃРґРµР»РєРё РґР»СЏ РІР»Р°РґРµР»СЊС†Р°.";
+			cout << "\nР’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РІР»Р°РґРµР»СЊС†Р°.";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			owner += surname;
 			owner += " ";
 			owner += name;
 			owner += " ";
 			owner += middleName;
-			cout << "Для какого предложения вы хотите найти покупателя?\n";
+			cout << "Р”Р»СЏ РєР°РєРѕРіРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ РІС‹ С…РѕС‚РёС‚Рµ РЅР°Р№С‚Рё РїРѕРєСѓРїР°С‚РµР»СЏ?\n";
 			for (int i = 0; i < vector_offers.size(); i++)
 			{
 				if (vector_offers[i].fio == owner)
 				{
 					find = true;
 					cout << counter << ")";
-					cout << "\nРайон - " << vector_offers[i].district;
-					cout << "\nЭтаж - " << vector_offers[i].floor;
-					cout << "\nПлощадь - " << vector_offers[i].area;
-					cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-					cout << "\nЦена - " << vector_offers[i].price;
+					cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+					cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+					cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+					cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+					cout << "\nР¦РµРЅР° - " << vector_offers[i].price;
 					cout << "\n";
-					cout << "\nХотите ли вы найти покупателя для данного предложения? Да - 1, Нет - 0\n";
+					cout << "\nРҐРѕС‚РёС‚Рµ Р»Рё РІС‹ РЅР°Р№С‚Рё РїРѕРєСѓРїР°С‚РµР»СЏ РґР»СЏ РґР°РЅРЅРѕРіРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ? Р”Р° - 1, РќРµС‚ - 0\n";
 					cin >> wanna;
 					if (wanna == 1)
 					{
 						int variant = 1;
 						system("cls");
-						cout << "Поиск покупателя";
+						cout << "РџРѕРёСЃРє РїРѕРєСѓРїР°С‚РµР»СЏ";
 						for (int j = 0; j < vector_demand.size(); j++)
 						{
 							if (vector_demand[j].district == vector_offers[i].district)
@@ -342,15 +342,15 @@ int main()
 										{
 											if (vector_demand[j].price >= vector_offers[i].price)
 											{
-												cout << "\nВариант номер - " << variant << ".\n";
-												cout << "\nМы нашли покупателя. Вот что ему нужно";
-												cout << "\nРайон - " << vector_demand[j].district;
-												cout << "\nЭтаж - " << vector_demand[j].floor;
-												cout << "\nПлощадь - " << vector_demand[j].area;
-												cout << "\nКоличество комнат - " << vector_demand[j].countOfRooms;
-												cout << "\nЦена покупки (до) - " << vector_demand[j].price;
-												cout << "\nВладелец - " << vector_demand[j].fio;
-												cout << "\nВведите 1, чтобы продолжить.\n";
+												cout << "\nР’Р°СЂРёР°РЅС‚ РЅРѕРјРµСЂ - " << variant << ".\n";
+												cout << "\nРњС‹ РЅР°С€Р»Рё РїРѕРєСѓРїР°С‚РµР»СЏ. Р’РѕС‚ С‡С‚Рѕ РµРјСѓ РЅСѓР¶РЅРѕ";
+												cout << "\nР Р°Р№РѕРЅ - " << vector_demand[j].district;
+												cout << "\nР­С‚Р°Р¶ - " << vector_demand[j].floor;
+												cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[j].area;
+												cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[j].countOfRooms;
+												cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_demand[j].price;
+												cout << "\nР’Р»Р°РґРµР»РµС† - " << vector_demand[j].fio;
+												cout << "\nР’РІРµРґРёС‚Рµ 1, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ.\n";
 												cin >> play;
 												variant++;
 											}
@@ -364,7 +364,7 @@ int main()
 			}
 			if (find = false)
 			{
-				cout << "Ни одного предложения от данного владельца не найдено.";
+				cout << "РќРё РѕРґРЅРѕРіРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ РѕС‚ РґР°РЅРЅРѕРіРѕ РІР»Р°РґРµР»СЊС†Р° РЅРµ РЅР°Р№РґРµРЅРѕ.";
 			}
 		}
 		else if (choice == 6)
@@ -373,39 +373,39 @@ int main()
 			bool find = false;
 			string surname, name, middleName, buyer;
 			system("cls");
-			cout << "Поиск подходящей сделки для покупателя.";
-			cout << "\nВведите данные покупателя.";
-			cout << "\nФамилия - ";
+			cout << "РџРѕРёСЃРє РїРѕРґС…РѕРґСЏС‰РµР№ СЃРґРµР»РєРё РґР»СЏ РїРѕРєСѓРїР°С‚РµР»СЏ.";
+			cout << "\nР’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РїРѕРєСѓРїР°С‚РµР»СЏ.";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			buyer += surname;
 			buyer += " ";
 			buyer += name;
 			buyer += " ";
 			buyer += middleName;
-			cout << "Для какого заказа вы хотите найти сделку?\n";
+			cout << "Р”Р»СЏ РєР°РєРѕРіРѕ Р·Р°РєР°Р·Р° РІС‹ С…РѕС‚РёС‚Рµ РЅР°Р№С‚Рё СЃРґРµР»РєСѓ?\n";
 			for (int i = 0; i < vector_demand.size(); i++)
 			{
 				if (vector_demand[i].fio == buyer)
 				{
 					find = true;
 					cout << counter << ")";
-					cout << "\nРайон - " << vector_demand[i].district;
-					cout << "\nЭтаж - " << vector_demand[i].floor;
-					cout << "\nПлощадь - " << vector_demand[i].area;
-					cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-					cout << "\nЦена - " << vector_demand[i].price;
+					cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+					cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+					cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+					cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+					cout << "\nР¦РµРЅР° - " << vector_demand[i].price;
 					cout << "\n";
-					cout << "\nХотите ли вы найти сделку для данного заказа? Да - 1, Нет - 0\n";
+					cout << "\nРҐРѕС‚РёС‚Рµ Р»Рё РІС‹ РЅР°Р№С‚Рё СЃРґРµР»РєСѓ РґР»СЏ РґР°РЅРЅРѕРіРѕ Р·Р°РєР°Р·Р°? Р”Р° - 1, РќРµС‚ - 0\n";
 					cin >> wanna;
 					if (wanna == 1)
 					{
 						int variant = 1;
 						system("cls");
-						cout << "Поиск сделки";
+						cout << "РџРѕРёСЃРє СЃРґРµР»РєРё";
 						for (int j = 0; j < vector_demand.size(); j++)
 						{
 							if (vector_offers[j].district == vector_demand[i].district)
@@ -418,15 +418,15 @@ int main()
 										{
 											if (vector_offers[j].price <= vector_demand[i].price)
 											{
-												cout << "\nВариант номер - " << variant << ".\n";
-												cout << "\nМы нашли сделку. Вот что предлагает владелец";
-												cout << "\nРайон - " << vector_offers[j].district;
-												cout << "\nЭтаж - " << vector_offers[j].floor;
-												cout << "\nПлощадь - " << vector_offers[j].area;
-												cout << "\nКоличество комнат - " << vector_offers[j].countOfRooms;
-												cout << "\nЦена покупки - " << vector_offers[j].price;
-												cout << "\nВладелец - " << vector_offers[j].fio;
-												cout << "\nВведите 1, чтобы продолжить.\n";
+												cout << "\nР’Р°СЂРёР°РЅС‚ РЅРѕРјРµСЂ - " << variant << ".\n";
+												cout << "\nРњС‹ РЅР°С€Р»Рё СЃРґРµР»РєСѓ. Р’РѕС‚ С‡С‚Рѕ РїСЂРµРґР»Р°РіР°РµС‚ РІР»Р°РґРµР»РµС†";
+												cout << "\nР Р°Р№РѕРЅ - " << vector_offers[j].district;
+												cout << "\nР­С‚Р°Р¶ - " << vector_offers[j].floor;
+												cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[j].area;
+												cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[j].countOfRooms;
+												cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё - " << vector_offers[j].price;
+												cout << "\nР’Р»Р°РґРµР»РµС† - " << vector_offers[j].fio;
+												cout << "\nР’РІРµРґРёС‚Рµ 1, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ.\n";
 												cin >> play;
 												variant++;
 											}
@@ -440,7 +440,7 @@ int main()
 			}
 			if (find = false)
 			{
-				cout << "Ни одного заказа от этого пользователя не найдено.";
+				cout << "РќРё РѕРґРЅРѕРіРѕ Р·Р°РєР°Р·Р° РѕС‚ СЌС‚РѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅРµ РЅР°Р№РґРµРЅРѕ.";
 			}
 		}
 		else if (choice == 7)
@@ -448,215 +448,215 @@ int main()
 			system("cls");
 			int offersOrDemand, field, value;
 			string value1;
-			cout << "Поиск по: \n1) Предложениям \n2) Заказам\n";
+			cout << "РџРѕРёСЃРє РїРѕ: \n1) РџСЂРµРґР»РѕР¶РµРЅРёСЏРј \n2) Р—Р°РєР°Р·Р°Рј\n";
 			cin >> offersOrDemand;
 			if (offersOrDemand == 1)
 			{
-				cout << "По какому полю ищем?";
-				cout << "\n1) Район;";
-				cout << "\n2) Этаж;";
-				cout << "\n3) Площадь;";
-				cout << "\n4) Количество комнат;";
-				cout << "\n5) Цена;";
-				cout << "\n6) Владелец;\n";
+				cout << "РџРѕ РєР°РєРѕРјСѓ РїРѕР»СЋ РёС‰РµРј?";
+				cout << "\n1) Р Р°Р№РѕРЅ;";
+				cout << "\n2) Р­С‚Р°Р¶;";
+				cout << "\n3) РџР»РѕС‰Р°РґСЊ;";
+				cout << "\n4) РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚;";
+				cout << "\n5) Р¦РµРЅР°;";
+				cout << "\n6) Р’Р»Р°РґРµР»РµС†;\n";
 				cin >> field;
 				if (field == 1)
 				{
-					cout << "\nРайон - ";
+					cout << "\nР Р°Р№РѕРЅ - ";
 					cin >> value1;
 					for (int i = 0; i < vector_offers.size(); i++)
 					{
 						if (vector_offers[i].district == value1)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_offers[i].district;
-							cout << "\nЭтаж - " << vector_offers[i].floor;
-							cout << "\nПлощадь - " << vector_offers[i].area;
-							cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_offers[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_offers[i].price;
 						}
 					}
 				}
 				if (field == 2)
 				{
-					cout << "\nЭтаж - ";
+					cout << "\nР­С‚Р°Р¶ - ";
 					cin >> value;
 					for (int i = 0; i < vector_offers.size(); i++)
 					{
 						if (vector_offers[i].floor == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_offers[i].district;
-							cout << "\nЭтаж - " << vector_offers[i].floor;
-							cout << "\nПлощадь - " << vector_offers[i].area;
-							cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_offers[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_offers[i].price;
 						}
 					}
 				}
 				if (field == 3)
 				{
-					cout << "\nПлощадь - ";
+					cout << "\nРџР»РѕС‰Р°РґСЊ - ";
 					cin >> value;
 					for (int i = 0; i < vector_offers.size(); i++)
 					{
 						if (vector_offers[i].area == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_offers[i].district;
-							cout << "\nЭтаж - " << vector_offers[i].floor;
-							cout << "\nПлощадь - " << vector_offers[i].area;
-							cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_offers[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_offers[i].price;
 						}
 					}
 				}
 				if (field == 4)
 				{
-					cout << "\nКоличество комнат - ";
+					cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - ";
 					cin >> value;
 					for (int i = 0; i < vector_offers.size(); i++)
 					{
 						if (vector_offers[i].countOfRooms == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_offers[i].district;
-							cout << "\nЭтаж - " << vector_offers[i].floor;
-							cout << "\nПлощадь - " << vector_offers[i].area;
-							cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_offers[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_offers[i].price;
 						}
 					}
 				}
 				if (field == 5)
 				{
-					cout << "\nЦена покупки - ";
+					cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё - ";
 					cin >> value;
 					for (int i = 0; i < vector_offers.size(); i++)
 					{
 						if (vector_offers[i].price == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_offers[i].district;
-							cout << "\nЭтаж - " << vector_offers[i].floor;
-							cout << "\nПлощадь - " << vector_offers[i].area;
-							cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_offers[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_offers[i].price;
 						}
 					}
 				}
 			}
 			else if (offersOrDemand == 2)
 			{
-				cout << "По какому полю ищем?";
-				cout << "\n1)Район;";
-				cout << "\n2) Этаж;";
-				cout << "\n3) Площадь;";
-				cout << "\n4) Количество комнат;";
-				cout << "\n5) Цена;";
-				cout << "\n6) Владелец;";
+				cout << "РџРѕ РєР°РєРѕРјСѓ РїРѕР»СЋ РёС‰РµРј?";
+				cout << "\n1)Р Р°Р№РѕРЅ;";
+				cout << "\n2) Р­С‚Р°Р¶;";
+				cout << "\n3) РџР»РѕС‰Р°РґСЊ;";
+				cout << "\n4) РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚;";
+				cout << "\n5) Р¦РµРЅР°;";
+				cout << "\n6) Р’Р»Р°РґРµР»РµС†;";
 				cin >> field;
 				if (field == 1)
 				{
-					cout << "\nРайон - ";
+					cout << "\nР Р°Р№РѕРЅ - ";
 					cin >> value1;
 					for (int i = 0; i < vector_demand.size(); i++)
 					{
 						if (vector_demand[i].district == value1)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_demand[i].district;
-							cout << "\nЭтаж - " << vector_demand[i].floor;
-							cout << "\nПлощадь - " << vector_demand[i].area;
-							cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_demand[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_demand[i].price;
 						}
 					}
 				}
 				if (field == 2)
 				{
-					cout << "\nЭтаж - ";
+					cout << "\nР­С‚Р°Р¶ - ";
 					cin >> value;
 					for (int i = 0; i < vector_demand.size(); i++)
 					{
 						if (vector_demand[i].floor == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_demand[i].district;
-							cout << "\nЭтаж - " << vector_demand[i].floor;
-							cout << "\nПлощадь - " << vector_demand[i].area;
-							cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_demand[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_demand[i].price;
 						}
 					}
 				}
 				if (field == 3)
 				{
-					cout << "\nПлощадь - ";
+					cout << "\nРџР»РѕС‰Р°РґСЊ - ";
 					cin >> value;
 					for (int i = 0; i < vector_demand.size(); i++)
 					{
 						if (vector_demand[i].area == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_demand[i].district;
-							cout << "\nЭтаж - " << vector_demand[i].floor;
-							cout << "\nПлощадь - " << vector_demand[i].area;
-							cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_demand[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_demand[i].price;
 						}
 					}
 				}
 				if (field == 4)
 				{
-					cout << "\nКоличество комнат - ";
+					cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - ";
 					cin >> value;
 					for (int i = 0; i < vector_demand.size(); i++)
 					{
 						if (vector_demand[i].countOfRooms == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_demand[i].district;
-							cout << "\nЭтаж - " << vector_demand[i].floor;
-							cout << "\nПлощадь - " << vector_demand[i].area;
-							cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_demand[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_demand[i].price;
 						}
 					}
 				}
 				if (field == 5)
 				{
-					cout << "\nЦена покупки - ";
+					cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё - ";
 					cin >> value;
 					for (int i = 0; i < vector_demand.size(); i++)
 					{
 						if (vector_demand[i].price == value)
 						{
-							cout << "\nНайдено совпадение!";
-							cout << "\nРайон - " << vector_demand[i].district;
-							cout << "\nЭтаж - " << vector_demand[i].floor;
-							cout << "\nПлощадь - " << vector_demand[i].area;
-							cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-							cout << "\nЦена покупки (до) - " << vector_demand[i].price;
+							cout << "\nРќР°Р№РґРµРЅРѕ СЃРѕРІРїР°РґРµРЅРёРµ!";
+							cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+							cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+							cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+							cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+							cout << "\nР¦РµРЅР° РїРѕРєСѓРїРєРё (РґРѕ) - " << vector_demand[i].price;
 						}
 					}
 				}
 			}
-			cout << "\nВведите 1 для продолжения работы.\n";
+			cout << "\nР’РІРµРґРёС‚Рµ 1 РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ СЂР°Р±РѕС‚С‹.\n";
 			cin >> value1;	
 		}
 		else if (choice == 8)
 		{
 			string surname, name, middleName, fio;
 			int type;
-			cout << "Что вы желаете удалить?\n1) Предложение \n2) Заказ\n";
+			cout << "Р§С‚Рѕ РІС‹ Р¶РµР»Р°РµС‚Рµ СѓРґР°Р»РёС‚СЊ?\n1) РџСЂРµРґР»РѕР¶РµРЅРёРµ \n2) Р—Р°РєР°Р·\n";
 			cin >> type;
-			cout << "Введите данные человека, выставившего объявление.";
-			cout << "\nФамилия - ";
+			cout << "Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ С‡РµР»РѕРІРµРєР°, РІС‹СЃС‚Р°РІРёРІС€РµРіРѕ РѕР±СЉСЏРІР»РµРЅРёРµ.";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			fio += surname;
 			fio += " ";
@@ -670,12 +670,12 @@ int main()
 				{
 					if (vector_offers[i].fio == fio)
 					{
-						cout << "\nРайон - " << vector_offers[i].district;
-						cout << "\nЭтаж - " << vector_offers[i].floor;
-						cout << "\nПлощадь - " << vector_offers[i].area;
-						cout << "\nКоличество комнат - " << vector_offers[i].countOfRooms;
-						cout << "\nЦена продажи - " << vector_offers[i].price;
-						cout << "\n\nВы точно хотите удалить данное объявление? Да - 1, Нет - 0\n";
+						cout << "\nР Р°Р№РѕРЅ - " << vector_offers[i].district;
+						cout << "\nР­С‚Р°Р¶ - " << vector_offers[i].floor;
+						cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_offers[i].area;
+						cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_offers[i].countOfRooms;
+						cout << "\nР¦РµРЅР° РїСЂРѕРґР°Р¶Рё - " << vector_offers[i].price;
+						cout << "\n\nР’С‹ С‚РѕС‡РЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РґР°РЅРЅРѕРµ РѕР±СЉСЏРІР»РµРЅРёРµ? Р”Р° - 1, РќРµС‚ - 0\n";
 						cin >> yesNo;
 						if (yesNo == 1)
 						{
@@ -690,12 +690,12 @@ int main()
 				{
 					if (vector_offers[i].fio == fio)
 					{
-						cout << "\nРайон - " << vector_demand[i].district;
-						cout << "\nЭтаж - " << vector_demand[i].floor;
-						cout << "\nПлощадь - " << vector_demand[i].area;
-						cout << "\nКоличество комнат - " << vector_demand[i].countOfRooms;
-						cout << "\nЦена продажи - " << vector_demand[i].price;
-						cout << "\n\nВы точно хотите удалить данное объявление? Да - 1, Нет - 0\n";
+						cout << "\nР Р°Р№РѕРЅ - " << vector_demand[i].district;
+						cout << "\nР­С‚Р°Р¶ - " << vector_demand[i].floor;
+						cout << "\nРџР»РѕС‰Р°РґСЊ - " << vector_demand[i].area;
+						cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРјРЅР°С‚ - " << vector_demand[i].countOfRooms;
+						cout << "\nР¦РµРЅР° РїСЂРѕРґР°Р¶Рё - " << vector_demand[i].price;
+						cout << "\n\nР’С‹ С‚РѕС‡РЅРѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РґР°РЅРЅРѕРµ РѕР±СЉСЏРІР»РµРЅРёРµ? Р”Р° - 1, РќРµС‚ - 0\n";
 						cin >> yesNo;
 						if (yesNo == 1)
 						{
@@ -709,26 +709,26 @@ int main()
 		{
 			system("cls");
 			string surname, name, middleName, fio1, fio2;
-			cout << "Обмен";
-			cout << "\nНайдём сделки для обмена";
-			cout << "\nНайдем первую сделку при помощи данных о владельце";
-			cout << "\nФамилия - ";
+			cout << "РћР±РјРµРЅ";
+			cout << "\nРќР°Р№РґС‘Рј СЃРґРµР»РєРё РґР»СЏ РѕР±РјРµРЅР°";
+			cout << "\nРќР°Р№РґРµРј РїРµСЂРІСѓСЋ СЃРґРµР»РєСѓ РїСЂРё РїРѕРјРѕС‰Рё РґР°РЅРЅС‹С… Рѕ РІР»Р°РґРµР»СЊС†Рµ";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			fio1 += surname;
 			fio1 += " ";
 			fio1 += name;
 			fio1 += " ";
 			fio1 += middleName;
-			cout << "\nНайдем вторую сделку при помощи данных о владельце";
-			cout << "\nФамилия - ";
+			cout << "\nРќР°Р№РґРµРј РІС‚РѕСЂСѓСЋ СЃРґРµР»РєСѓ РїСЂРё РїРѕРјРѕС‰Рё РґР°РЅРЅС‹С… Рѕ РІР»Р°РґРµР»СЊС†Рµ";
+			cout << "\nР¤Р°РјРёР»РёСЏ - ";
 			cin >> surname;
-			cout << "Имя - ";
+			cout << "РРјСЏ - ";
 			cin >> name;
-			cout << "Отчество - ";
+			cout << "РћС‚С‡РµСЃС‚РІРѕ - ";
 			cin >> middleName;
 			fio2 += surname;
 			fio2 += " ";
@@ -747,8 +747,8 @@ int main()
 							kek = vector_offers[i].fio;
 							vector_offers[i].fio = vector_offers[j].fio;
 							vector_offers[j].fio = kek;
-							cout << "Обмен завершен.";
-							cout << "Введите 1, чтобы продолжить.";
+							cout << "РћР±РјРµРЅ Р·Р°РІРµСЂС€РµРЅ.";
+							cout << "Р’РІРµРґРёС‚Рµ 1, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ.";
 							cin >> kek;
 						}
 					}
@@ -757,7 +757,7 @@ int main()
 		}
 		else if (choice == 10)
 		{
-			cout << "Выключение программы...";
+			cout << "Р’С‹РєР»СЋС‡РµРЅРёРµ РїСЂРѕРіСЂР°РјРјС‹...";
 			return 0;
 		}
 	}
